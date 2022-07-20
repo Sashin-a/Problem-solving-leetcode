@@ -16,7 +16,7 @@ public class DetectLinkedListCycle {
 
         fast = head;
         while(fast != slow){
-            fast = fast.next;s
+            fast = fast.next;
             slow = slow.next;
         }
         return fast;
