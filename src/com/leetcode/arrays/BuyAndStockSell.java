@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 public class BuyAndStockSell {
-    public int maxProfit(int[] prices) {
+    public static int maxProfit(int[] prices) {
         int min = Integer.MAX_VALUE;
         int max = 0;
 
