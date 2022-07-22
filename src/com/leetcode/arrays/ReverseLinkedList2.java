@@ -1,2 +1,4 @@
-package com.leetcode.arrays;public class ReverseLinkedList2 {
+package com.leetcode.arrays;
+
+public class ReverseLinkedList2 {
 }
