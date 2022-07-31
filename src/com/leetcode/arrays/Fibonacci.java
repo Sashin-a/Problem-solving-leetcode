@@ -22,7 +22,7 @@ public class Fibonacci {
 
         private int fibonacci(int n)
         {
-            int[] store = new int [n+2];
+            int[] store = new int [n];
 
             store[0]=0;
             store[1] =1;
