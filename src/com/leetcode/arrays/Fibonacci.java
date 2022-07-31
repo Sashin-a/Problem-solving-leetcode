@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 public class Fibonacci {
-    class Solution {
+
         public int fib(int n) {
             return fibonacci(n) ;
         }
@@ -37,4 +37,3 @@ public class Fibonacci {
             return store[n];
         }
     }
-}
