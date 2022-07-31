@@ -2,6 +2,7 @@ package com.leetcode.arrays;
 
 import java.util.HashMap;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class ValidParenthesis {
     public boolean isValid(String s) {
@@ -30,6 +31,7 @@ public class ValidParenthesis {
                 }
             }
         }
+
         return stack.isEmpty();
     }
 }
