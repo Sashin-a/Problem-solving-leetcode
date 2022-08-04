@@ -3,10 +3,10 @@ package com.leetcode.arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Spiraling2dMatrix {
+public class Spiraling2dSquareMatrix {
     public List<Integer> spiralOrder(int[][] matrix) {
-        int m = matrix.length;
-        int n = matrix[0].length;
+        int m = matrix.length; //3
+        int n = matrix[0].length; //4
         int size= (int) Math.ceil( 0.5* (n+1));
 
         List<Integer> list = new ArrayList<>(m*n);
@@ -16,29 +16,21 @@ public class Spiraling2dMatrix {
             spiralMatrix(list, offset, matrix);
         }
 
-        // System.out.println(matrix.length);
-
         return list;
     }
 
     private void spiralMatrix(List<Integer> list, Integer offset, int[][] matrix)
     {
-        if(offset==matrix.length-offset-1)
-        {
-            list.add(matrix[offset][offset]);
-            return;
-        }
-
-        for(int j = offset; j< matrix.length-offset-1;++j)
+        for(int j = offset; j< matrix[0].length-offset-1;++j)
         {
             list.add(matrix[offset][j]);
         }
         for(int i = offset; i< matrix.length-offset-1;++i)
         {
-            list.add(matrix[i][matrix.length-offset-1]);
+            list.add(matrix[i][matrix[0].length-offset-1]);
         }
 
-        for(int j = matrix.length - offset -1; j>offset; --j)
+        for(int j = matrix[0].length - offset -1; j>offset; --j)
         {
             list.add(matrix[matrix.length - offset -1][j]);
         }
@@ -49,10 +41,10 @@ public class Spiraling2dMatrix {
         }
     }
 
-//    public static void main(String[] args) {
-//        Spiraling2dMatrix spiraling2dMatrix = new Spiraling2dMatrix();
-//        int[][] matrix = {{1,2,3,4}, {5,6, 7, 8}, {9, 10, 11, 12}};
-//
-//        System.out.print(spiraling2dMatrix.spiralOrder(matrix));
-//    }
+    public static void main(String[] args) {
+        Spiraling2dSquareMatrix spiraling2dMatrix = new Spiraling2dSquareMatrix();
+        int[][] matrix = {{1,2,3,4}, {5,6, 7, 8}, {9, 10, 11, 12}};
+
+        System.out.print(spiraling2dMatrix.spiralOrder(matrix));
+    }
 }
